@@ -14,3 +14,6 @@ data/*.db
 # Node
 node_modules/
 dist/
+
+# Benchmark output from --fake runs (real runs are kept)
+backend/eval/results/fake-*/

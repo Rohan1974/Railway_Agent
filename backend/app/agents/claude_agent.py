@@ -56,8 +56,9 @@ class ClaudeAgent:
             if getattr(block, "type", None) != "tool_use":
                 continue
             t0 = time.perf_counter()
-            result, ok = execute_tool(self.service, block.name, dict(block.input))
-            self.telemetry.tool_call(ctx, block.name, (time.perf_counter() - t0) * 1000, ok)
+            args = dict(block.input)
+            result, ok = execute_tool(self.service, block.name, args)
+            self.telemetry.tool_call(ctx, block.name, (time.perf_counter() - t0) * 1000, ok, args)
             results.append({"type": "tool_result", "tool_use_id": block.id,
                             "content": json.dumps(result, ensure_ascii=False), "is_error": not ok})
         return results

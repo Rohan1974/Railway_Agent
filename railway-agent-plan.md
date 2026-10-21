@@ -80,7 +80,12 @@ In Mode A, Claude does every step. In Mode B, 3–5 steps go to Jev, and some of
 - [x] Phase 2 (backend): Mode A Claude agent with tool loop, `/api/chat`
 - [x] Phase 3: telemetry (model_calls, tool_calls, turns tables; cost from token counts; p50/p95 summary)
 - [ ] Phase 2 (frontend): chat UI
-- [ ] Phase 4: eval dataset + benchmark runner
+- [x] Phase 4: eval datasets + benchmark runner
+  - decisions bench: 215 labelled rows (intent 99, confirmation 34, class 32, quota 26, frustration 24), en/hi/mr incl. Devanagari
+  - scenarios bench: 24 multi-turn conversations, fresh mock DB per run, judged on end state + tool args
+  - `runs` table + `eval/results/<run_id>/`; modes interleaved per item; `--fake` for offline checks
+  - Mode A classifier = Claude with the same model/effort; Jev adapter is a stub until API access
+  - TODO before publishing: user reviews dataset labels
 - [ ] Phase 5: dashboard
 - [ ] Phase 6: Mode B (waiting for Jev API access)
 - [ ] Phase 7: LinkedIn assets

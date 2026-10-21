@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "run_id": "scenarios-20261021-082242-fbd4",
+    "bench": "scenarios",
+    "modes": [
+      "A"
+    ],
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "repeats": 1,
+    "items": 2,
+    "dataset_sha": "9a5dc334bf89",
+    "git_commit": "f71cc6d-dirty",
+    "fake": false
+  },
+  "summary": {
+    "A": {
+      "runs": 2,
+      "errors": 0,
+      "success_rate": 1.0,
+      "by_category": {
+        "book": {
+          "n": 1,
+          "success_rate": 1.0
+        },
+        "search": {
+          "n": 1,
+          "success_rate": 1.0
+        }
+      },
+      "turn_latency_ms": {
+        "p50": 4469.9,
+        "p95": 4705.79,
+        "mean": 4334.666666666667,
+        "n": 3
+      },
+      "scenario_latency_ms": {
+        "p50": 6502.0,
+        "p95": 8095.0,
+        "mean": 6502.0,
+        "n": 2
+      },
+      "cost_usd": {
+        "total": 0.031116,
+        "per_scenario": 0.015558
+      },
+      "llm_calls_per_scenario": 3.0,
+      "decision_calls_per_scenario": 0.0,
+      "failures": []
+    }
+  }
+}

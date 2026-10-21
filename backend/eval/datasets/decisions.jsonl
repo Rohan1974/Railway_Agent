@@ -1,0 +1,215 @@
+{"id": "int-001", "task": "intent", "text": "Show me trains from Mumbai to Pune tomorrow", "lang": "en", "label": "search_trains"}
+{"id": "int-002", "task": "intent", "text": "Trains from Pune to Nagpur on 25 October?", "lang": "en", "label": "search_trains"}
+{"id": "int-003", "task": "intent", "text": "Udya Pune te Mumbai train kontya aahet?", "lang": "mr", "label": "search_trains"}
+{"id": "int-004", "task": "intent", "text": "Kal Mumbai se Delhi ke liye koi train hai?", "lang": "hi", "label": "search_trains"}
+{"id": "int-005", "task": "intent", "text": "मुंबईहून नागपूरला शनिवारी कोणत्या गाड्या आहेत?", "lang": "mr-dev", "label": "search_trains"}
+{"id": "int-006", "task": "intent", "text": "मुझे परसों पुणे से सोलापुर जाना है, कौन सी ट्रेन है?", "lang": "hi-dev", "label": "search_trains"}
+{"id": "int-007", "task": "intent", "text": "any AC train to Goa this Friday from Dadar", "lang": "en", "label": "search_trains"}
+{"id": "int-008", "task": "intent", "text": "Need a sleeper train from Mumbai to Kolhapur next Monday", "lang": "en", "label": "search_trains"}
+{"id": "int-009", "task": "intent", "text": "Pune to Delhi direct train?", "lang": "en", "label": "search_trains"}
+{"id": "int-010", "task": "intent", "text": "Mumbai Ahmedabad Shatabdi chalte ka udya?", "lang": "mr", "label": "search_trains"}
+{"id": "int-011", "task": "intent", "text": "Nagpur la jaycha aahe 24 tarkhela, train sanga", "lang": "mr", "label": "search_trains"}
+{"id": "int-012", "task": "intent", "text": "Is there any train from Solapur to Mumbai tonight", "lang": "en", "label": "search_trains"}
+{"id": "int-013", "task": "intent", "text": "Bengaluru jaane ke liye Mumbai se train dikhao", "lang": "hi", "label": "search_trains"}
+{"id": "int-014", "task": "intent", "text": "पुणे ते कोल्हापूर रात्रीची गाडी", "lang": "mr-dev", "label": "search_trains"}
+{"id": "int-015", "task": "intent", "text": "Trains between CSMT and PUNE on 2026-10-28 in chair car", "lang": "en", "label": "search_trains"}
+{"id": "int-016", "task": "intent", "text": "Mumbai to Madgaon morning trains", "lang": "en", "label": "search_trains"}
+{"id": "int-017", "task": "intent", "text": "3rd AC madhe Mumbai-Nagpur kontya gadya aahet 30 la?", "lang": "mr", "label": "search_trains"}
+{"id": "int-018", "task": "intent", "text": "Dilli ke liye second AC mein train batao", "lang": "hi", "label": "search_trains"}
+{"id": "int-019", "task": "intent", "text": "Find me first class AC trains Mumbai to Delhi", "lang": "en", "label": "search_trains"}
+{"id": "int-020", "task": "intent", "text": "executive class Pune Mumbai train", "lang": "en", "label": "search_trains"}
+{"id": "int-021", "task": "intent", "text": "Is there a seat available in 12123 on 23rd in CC?", "lang": "en", "label": "check_availability"}
+{"id": "int-022", "task": "intent", "text": "Vidarbha Express madhe 3A la jaga aahe ka udya?", "lang": "mr", "label": "check_availability"}
+{"id": "int-023", "task": "intent", "text": "12289 mein sleeper ki availability check karo 26 Oct ke liye", "lang": "hi", "label": "check_availability"}
+{"id": "int-024", "task": "intent", "text": "Deccan Express la seats aahet ka shanivari?", "lang": "mr", "label": "check_availability"}
+{"id": "int-025", "task": "intent", "text": "Rajdhani 12951 me 2A available hai kya kal?", "lang": "hi", "label": "check_availability"}
+{"id": "int-026", "task": "intent", "text": "check if Mahalaxmi Express has berths on 27th", "lang": "en", "label": "check_availability"}
+{"id": "int-027", "task": "intent", "text": "क्या 12105 में 25 तारीख को स्लीपर में सीट खाली है?", "lang": "hi-dev", "label": "check_availability"}
+{"id": "int-028", "task": "intent", "text": "Udyan Express chi availability bagh 3 tier sathi", "lang": "mr", "label": "check_availability"}
+{"id": "int-029", "task": "intent", "text": "How many seats are left on the Duronto to Nagpur this Sunday in first AC?", "lang": "en", "label": "check_availability"}
+{"id": "int-030", "task": "intent", "text": "Tejas Express full aahe ka udya?", "lang": "mr", "label": "check_availability"}
+{"id": "int-031", "task": "intent", "text": "How much is the fare from Mumbai to Pune in Deccan Queen chair car?", "lang": "en", "label": "get_fare"}
+{"id": "int-032", "task": "intent", "text": "Pune Solapur intercity cha ticket kiti aahe?", "lang": "mr", "label": "get_fare"}
+{"id": "int-033", "task": "intent", "text": "Rajdhani 3AC ka kiraya kitna hai Mumbai se Delhi?", "lang": "hi", "label": "get_fare"}
+{"id": "int-034", "task": "intent", "text": "What's the ticket price for sleeper in Vidarbha Express to Nagpur", "lang": "en", "label": "get_fare"}
+{"id": "int-035", "task": "intent", "text": "Tatkal madhe Deccan Queen che bhade kiti padel?", "lang": "mr", "label": "get_fare"}
+{"id": "int-036", "task": "intent", "text": "12137 Punjab Mail 2A fare for 3 people", "lang": "en", "label": "get_fare"}
+{"id": "int-037", "task": "intent", "text": "Senior citizen ke liye fare kitna hoga Mumbai Pune?", "lang": "hi", "label": "get_fare"}
+{"id": "int-038", "task": "intent", "text": "मुंबई ते गोवा जनशताब्दी तिकीट किती?", "lang": "mr-dev", "label": "get_fare"}
+{"id": "int-039", "task": "intent", "text": "price of executive chair car on 12009", "lang": "en", "label": "get_fare"}
+{"id": "int-040", "task": "intent", "text": "Mahalaxmi Express sleeper fare Kolhapur la", "lang": "mr", "label": "get_fare"}
+{"id": "int-041", "task": "intent", "text": "Book 2 tickets from Mumbai to Pune tomorrow on Deccan Queen", "lang": "en", "label": "book_ticket"}
+{"id": "int-042", "task": "intent", "text": "Mala udya Nagpur sathi 3A ticket book karaycha aahe", "lang": "mr", "label": "book_ticket"}
+{"id": "int-043", "task": "intent", "text": "Kal ke liye Rajdhani mein ek ticket book kar do", "lang": "hi", "label": "book_ticket"}
+{"id": "int-044", "task": "intent", "text": "Please book a tatkal ticket in 11007 for tomorrow", "lang": "en", "label": "book_ticket"}
+{"id": "int-045", "task": "intent", "text": "Book a ladies quota seat for my mother on Deccan Express", "lang": "en", "label": "book_ticket"}
+{"id": "int-046", "task": "intent", "text": "Do senior citizen tickets book karo Pune se Solapur", "lang": "hi", "label": "book_ticket"}
+{"id": "int-047", "task": "intent", "text": "माझ्यासाठी शुक्रवारी पुणे ते दिल्ली दुरांतो बुक कर", "lang": "mr-dev", "label": "book_ticket"}
+{"id": "int-048", "task": "intent", "text": "Reserve 4 sleeper berths on Vidarbha Express for 25th", "lang": "en", "label": "book_ticket"}
+{"id": "int-049", "task": "intent", "text": "I want to book first AC on Punjab Mail to Delhi", "lang": "en", "label": "book_ticket"}
+{"id": "int-050", "task": "intent", "text": "Tatkal madhe udya chi Deccan Queen book kar, 2 jan", "lang": "mr", "label": "book_ticket"}
+{"id": "int-051", "task": "intent", "text": "book karo bhai Mumbai Goa Tejas ka ticket", "lang": "hi", "label": "book_ticket"}
+{"id": "int-052", "task": "intent", "text": "I'd like to reserve chair car seats on the Intercity to Pune, 3 adults", "lang": "en", "label": "book_ticket"}
+{"id": "int-053", "task": "intent", "text": "आई साठी लेडीज कोट्यात तिकीट काढायचं आहे", "lang": "mr-dev", "label": "book_ticket"}
+{"id": "int-054", "task": "intent", "text": "Mere dada ji 70 saal ke hain, unke liye senior citizen quota mein ticket book karna hai", "lang": "hi", "label": "book_ticket"}
+{"id": "int-055", "task": "intent", "text": "Go ahead and get me a 2A ticket on 12290 for 28th", "lang": "en", "label": "book_ticket"}
+{"id": "int-056", "task": "intent", "text": "What is the status of PNR 4521367890?", "lang": "en", "label": "pnr_status"}
+{"id": "int-057", "task": "intent", "text": "PNR 8123456789 confirm zala ka?", "lang": "mr", "label": "pnr_status"}
+{"id": "int-058", "task": "intent", "text": "Mera PNR 2345678901 hai, status batao", "lang": "hi", "label": "pnr_status"}
+{"id": "int-059", "task": "intent", "text": "माझ्या PNR 6789012345 ची स्थिती काय आहे?", "lang": "mr-dev", "label": "pnr_status"}
+{"id": "int-060", "task": "intent", "text": "Is my ticket confirmed? PNR is 1029384756", "lang": "en", "label": "pnr_status"}
+{"id": "int-061", "task": "intent", "text": "4561237890 cha status sang", "lang": "mr", "label": "pnr_status"}
+{"id": "int-062", "task": "intent", "text": "waiting list clear hua kya? PNR 5647382910", "lang": "hi", "label": "pnr_status"}
+{"id": "int-063", "task": "intent", "text": "check pnr 9988776655", "lang": "en", "label": "pnr_status"}
+{"id": "int-064", "task": "intent", "text": "Cancel my ticket with PNR 4521367890", "lang": "en", "label": "cancel_ticket"}
+{"id": "int-065", "task": "intent", "text": "PNR 8123456789 cancel kar", "lang": "mr", "label": "cancel_ticket"}
+{"id": "int-066", "task": "intent", "text": "Mujhe apna ticket cancel karna hai, PNR 2345678901", "lang": "hi", "label": "cancel_ticket"}
+{"id": "int-067", "task": "intent", "text": "माझं तिकीट रद्द करा, PNR 6789012345", "lang": "mr-dev", "label": "cancel_ticket"}
+{"id": "int-068", "task": "intent", "text": "I won't be travelling, please cancel booking 1029384756", "lang": "en", "label": "cancel_ticket"}
+{"id": "int-069", "task": "intent", "text": "I need to cancel PNR 5647382910 and get my refund", "lang": "en", "label": "cancel_ticket"}
+{"id": "int-070", "task": "intent", "text": "plan cancel zala, ticket pan cancel kar 9988776655", "lang": "mr", "label": "cancel_ticket"}
+{"id": "int-071", "task": "intent", "text": "यह टिकट रद्द कर दो, पीएनआर 4561237890", "lang": "hi-dev", "label": "cancel_ticket"}
+{"id": "int-072", "task": "intent", "text": "Rohan Patole, 28, male", "lang": "en", "label": "provide_details"}
+{"id": "int-073", "task": "intent", "text": "Passengers: Priya 26 F, Amit 30 M", "lang": "en", "label": "provide_details"}
+{"id": "int-074", "task": "intent", "text": "Naav Sunita Joshi, vay 58, female", "lang": "mr", "label": "provide_details"}
+{"id": "int-075", "task": "intent", "text": "Mera naam Rahul Verma, umar 35, purush", "lang": "hi", "label": "provide_details"}
+{"id": "int-076", "task": "intent", "text": "दोन प्रवासी: आशा 62 स्त्री, विनायक 65 पुरुष", "lang": "mr-dev", "label": "provide_details"}
+{"id": "int-077", "task": "intent", "text": "lower berth please, my father is 67", "lang": "en", "label": "provide_details"}
+{"id": "int-078", "task": "intent", "text": "The second one, the 7 AM train", "lang": "en", "label": "provide_details"}
+{"id": "int-079", "task": "intent", "text": "pahili wali chalel", "lang": "mr", "label": "provide_details"}
+{"id": "int-080", "task": "intent", "text": "From Dadar, not CSMT", "lang": "en", "label": "provide_details"}
+{"id": "int-081", "task": "intent", "text": "teen log hain, sab adult", "lang": "hi", "label": "provide_details"}
+{"id": "int-082", "task": "intent", "text": "Hi", "lang": "en", "label": "greeting"}
+{"id": "int-083", "task": "intent", "text": "Namaskar!", "lang": "mr", "label": "greeting"}
+{"id": "int-084", "task": "intent", "text": "नमस्ते", "lang": "hi-dev", "label": "greeting"}
+{"id": "int-085", "task": "intent", "text": "thanks a lot!", "lang": "en", "label": "greeting"}
+{"id": "int-086", "task": "intent", "text": "Good morning", "lang": "en", "label": "greeting"}
+{"id": "int-087", "task": "intent", "text": "dhanyavad, khup madat zali", "lang": "mr", "label": "greeting"}
+{"id": "int-088", "task": "intent", "text": "Tell me a joke", "lang": "en", "label": "off_topic"}
+{"id": "int-089", "task": "intent", "text": "What's the weather in Pune today?", "lang": "en", "label": "off_topic"}
+{"id": "int-090", "task": "intent", "text": "Ek joke sang na", "lang": "mr", "label": "off_topic"}
+{"id": "int-091", "task": "intent", "text": "Book a flight from Mumbai to Delhi", "lang": "en", "label": "off_topic"}
+{"id": "int-092", "task": "intent", "text": "Who won the cricket match yesterday?", "lang": "en", "label": "off_topic"}
+{"id": "int-093", "task": "intent", "text": "Mala biryani chi recipe sang", "lang": "mr", "label": "off_topic"}
+{"id": "int-094", "task": "intent", "text": "Write my college essay on climate change", "lang": "en", "label": "off_topic"}
+{"id": "int-095", "task": "intent", "text": "Book me an Uber to CSMT station", "lang": "en", "label": "off_topic"}
+{"id": "int-096", "task": "intent", "text": "Bus ticket Pune se Mumbai kitne ka hai?", "lang": "hi", "label": "off_topic"}
+{"id": "int-097", "task": "intent", "text": "What is the capital of France?", "lang": "en", "label": "off_topic"}
+{"id": "int-098", "task": "intent", "text": "Pune station javal changla hotel suggest kar", "lang": "mr", "label": "off_topic"}
+{"id": "int-099", "task": "intent", "text": "मला शेअर मार्केट टिप्स दे", "lang": "mr-dev", "label": "off_topic"}
+{"id": "tra-001", "task": "travel_class", "text": "Show me trains from Mumbai to Pune tomorrow", "lang": "en", "label": "none"}
+{"id": "tra-002", "task": "travel_class", "text": "Trains from Pune to Nagpur on 25 October?", "lang": "en", "label": "none"}
+{"id": "tra-003", "task": "travel_class", "text": "Udya Pune te Mumbai train kontya aahet?", "lang": "mr", "label": "none"}
+{"id": "tra-004", "task": "travel_class", "text": "any AC train to Goa this Friday from Dadar", "lang": "en", "label": "none"}
+{"id": "tra-005", "task": "travel_class", "text": "Need a sleeper train from Mumbai to Kolhapur next Monday", "lang": "en", "label": "SL"}
+{"id": "tra-006", "task": "travel_class", "text": "Trains between CSMT and PUNE on 2026-10-28 in chair car", "lang": "en", "label": "CC"}
+{"id": "tra-007", "task": "travel_class", "text": "3rd AC madhe Mumbai-Nagpur kontya gadya aahet 30 la?", "lang": "mr", "label": "3A"}
+{"id": "tra-008", "task": "travel_class", "text": "Dilli ke liye second AC mein train batao", "lang": "hi", "label": "2A"}
+{"id": "tra-009", "task": "travel_class", "text": "Find me first class AC trains Mumbai to Delhi", "lang": "en", "label": "1A"}
+{"id": "tra-010", "task": "travel_class", "text": "executive class Pune Mumbai train", "lang": "en", "label": "EC"}
+{"id": "tra-011", "task": "travel_class", "text": "Is there a seat available in 12123 on 23rd in CC?", "lang": "en", "label": "CC"}
+{"id": "tra-012", "task": "travel_class", "text": "Vidarbha Express madhe 3A la jaga aahe ka udya?", "lang": "mr", "label": "3A"}
+{"id": "tra-013", "task": "travel_class", "text": "12289 mein sleeper ki availability check karo 26 Oct ke liye", "lang": "hi", "label": "SL"}
+{"id": "tra-014", "task": "travel_class", "text": "Deccan Express la seats aahet ka shanivari?", "lang": "mr", "label": "none"}
+{"id": "tra-015", "task": "travel_class", "text": "Rajdhani 12951 me 2A available hai kya kal?", "lang": "hi", "label": "2A"}
+{"id": "tra-016", "task": "travel_class", "text": "check if Mahalaxmi Express has berths on 27th", "lang": "en", "label": "none"}
+{"id": "tra-017", "task": "travel_class", "text": "क्या 12105 में 25 तारीख को स्लीपर में सीट खाली है?", "lang": "hi-dev", "label": "SL"}
+{"id": "tra-018", "task": "travel_class", "text": "Udyan Express chi availability bagh 3 tier sathi", "lang": "mr", "label": "3A"}
+{"id": "tra-019", "task": "travel_class", "text": "How many seats are left on the Duronto to Nagpur this Sunday in first AC?", "lang": "en", "label": "1A"}
+{"id": "tra-020", "task": "travel_class", "text": "How much is the fare from Mumbai to Pune in Deccan Queen chair car?", "lang": "en", "label": "CC"}
+{"id": "tra-021", "task": "travel_class", "text": "Rajdhani 3AC ka kiraya kitna hai Mumbai se Delhi?", "lang": "hi", "label": "3A"}
+{"id": "tra-022", "task": "travel_class", "text": "What's the ticket price for sleeper in Vidarbha Express to Nagpur", "lang": "en", "label": "SL"}
+{"id": "tra-023", "task": "travel_class", "text": "12137 Punjab Mail 2A fare for 3 people", "lang": "en", "label": "2A"}
+{"id": "tra-024", "task": "travel_class", "text": "price of executive chair car on 12009", "lang": "en", "label": "EC"}
+{"id": "tra-025", "task": "travel_class", "text": "Mahalaxmi Express sleeper fare Kolhapur la", "lang": "mr", "label": "SL"}
+{"id": "tra-026", "task": "travel_class", "text": "Book 2 tickets from Mumbai to Pune tomorrow on Deccan Queen", "lang": "en", "label": "none"}
+{"id": "tra-027", "task": "travel_class", "text": "Mala udya Nagpur sathi 3A ticket book karaycha aahe", "lang": "mr", "label": "3A"}
+{"id": "tra-028", "task": "travel_class", "text": "Kal ke liye Rajdhani mein ek ticket book kar do", "lang": "hi", "label": "none"}
+{"id": "tra-029", "task": "travel_class", "text": "Reserve 4 sleeper berths on Vidarbha Express for 25th", "lang": "en", "label": "SL"}
+{"id": "tra-030", "task": "travel_class", "text": "I want to book first AC on Punjab Mail to Delhi", "lang": "en", "label": "1A"}
+{"id": "tra-031", "task": "travel_class", "text": "I'd like to reserve chair car seats on the Intercity to Pune, 3 adults", "lang": "en", "label": "CC"}
+{"id": "tra-032", "task": "travel_class", "text": "Go ahead and get me a 2A ticket on 12290 for 28th", "lang": "en", "label": "2A"}
+{"id": "quo-001", "task": "quota", "text": "Show me trains from Mumbai to Pune tomorrow", "lang": "en", "label": "GN"}
+{"id": "quo-002", "task": "quota", "text": "How much is the fare from Mumbai to Pune in Deccan Queen chair car?", "lang": "en", "label": "GN"}
+{"id": "quo-003", "task": "quota", "text": "Pune Solapur intercity cha ticket kiti aahe?", "lang": "mr", "label": "GN"}
+{"id": "quo-004", "task": "quota", "text": "Rajdhani 3AC ka kiraya kitna hai Mumbai se Delhi?", "lang": "hi", "label": "GN"}
+{"id": "quo-005", "task": "quota", "text": "What's the ticket price for sleeper in Vidarbha Express to Nagpur", "lang": "en", "label": "GN"}
+{"id": "quo-006", "task": "quota", "text": "Tatkal madhe Deccan Queen che bhade kiti padel?", "lang": "mr", "label": "TQ"}
+{"id": "quo-007", "task": "quota", "text": "12137 Punjab Mail 2A fare for 3 people", "lang": "en", "label": "GN"}
+{"id": "quo-008", "task": "quota", "text": "Senior citizen ke liye fare kitna hoga Mumbai Pune?", "lang": "hi", "label": "SS"}
+{"id": "quo-009", "task": "quota", "text": "मुंबई ते गोवा जनशताब्दी तिकीट किती?", "lang": "mr-dev", "label": "GN"}
+{"id": "quo-010", "task": "quota", "text": "price of executive chair car on 12009", "lang": "en", "label": "GN"}
+{"id": "quo-011", "task": "quota", "text": "Mahalaxmi Express sleeper fare Kolhapur la", "lang": "mr", "label": "GN"}
+{"id": "quo-012", "task": "quota", "text": "Book 2 tickets from Mumbai to Pune tomorrow on Deccan Queen", "lang": "en", "label": "GN"}
+{"id": "quo-013", "task": "quota", "text": "Mala udya Nagpur sathi 3A ticket book karaycha aahe", "lang": "mr", "label": "GN"}
+{"id": "quo-014", "task": "quota", "text": "Kal ke liye Rajdhani mein ek ticket book kar do", "lang": "hi", "label": "GN"}
+{"id": "quo-015", "task": "quota", "text": "Please book a tatkal ticket in 11007 for tomorrow", "lang": "en", "label": "TQ"}
+{"id": "quo-016", "task": "quota", "text": "Book a ladies quota seat for my mother on Deccan Express", "lang": "en", "label": "LD"}
+{"id": "quo-017", "task": "quota", "text": "Do senior citizen tickets book karo Pune se Solapur", "lang": "hi", "label": "SS"}
+{"id": "quo-018", "task": "quota", "text": "माझ्यासाठी शुक्रवारी पुणे ते दिल्ली दुरांतो बुक कर", "lang": "mr-dev", "label": "GN"}
+{"id": "quo-019", "task": "quota", "text": "Reserve 4 sleeper berths on Vidarbha Express for 25th", "lang": "en", "label": "GN"}
+{"id": "quo-020", "task": "quota", "text": "I want to book first AC on Punjab Mail to Delhi", "lang": "en", "label": "GN"}
+{"id": "quo-021", "task": "quota", "text": "Tatkal madhe udya chi Deccan Queen book kar, 2 jan", "lang": "mr", "label": "TQ"}
+{"id": "quo-022", "task": "quota", "text": "book karo bhai Mumbai Goa Tejas ka ticket", "lang": "hi", "label": "GN"}
+{"id": "quo-023", "task": "quota", "text": "I'd like to reserve chair car seats on the Intercity to Pune, 3 adults", "lang": "en", "label": "GN"}
+{"id": "quo-024", "task": "quota", "text": "आई साठी लेडीज कोट्यात तिकीट काढायचं आहे", "lang": "mr-dev", "label": "LD"}
+{"id": "quo-025", "task": "quota", "text": "Mere dada ji 70 saal ke hain, unke liye senior citizen quota mein ticket book karna hai", "lang": "hi", "label": "SS"}
+{"id": "quo-026", "task": "quota", "text": "Go ahead and get me a 2A ticket on 12290 for 28th", "lang": "en", "label": "GN"}
+{"id": "con-001", "task": "confirmation", "text": "yes", "lang": "en", "label": "yes", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-002", "task": "confirmation", "text": "Yes please, go ahead", "lang": "en", "label": "yes", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-003", "task": "confirmation", "text": "haan kar do", "lang": "hi", "label": "yes", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-004", "task": "confirmation", "text": "ho, kar book", "lang": "mr", "label": "yes", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-005", "task": "confirmation", "text": "chalel", "lang": "mr", "label": "yes", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-006", "task": "confirmation", "text": "बरोबर आहे, बुक कर", "lang": "mr-dev", "label": "yes", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-007", "task": "confirmation", "text": "हाँ बिल्कुल", "lang": "hi-dev", "label": "yes", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-008", "task": "confirmation", "text": "ok done", "lang": "en", "label": "yes", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-009", "task": "confirmation", "text": "theek hai", "lang": "hi", "label": "yes", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-010", "task": "confirmation", "text": "sure 👍", "lang": "en", "label": "yes", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-011", "task": "confirmation", "text": "ठीक आहे", "lang": "mr-dev", "label": "yes", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-012", "task": "confirmation", "text": "ho cancel kar", "lang": "mr", "label": "yes", "context": "Do you want me to cancel PNR 4521367890? The refund will be Rs 720. Please confirm."}
+{"id": "con-013", "task": "confirmation", "text": "haan cancel kar do", "lang": "hi", "label": "yes", "context": "Do you want me to cancel PNR 4521367890? The refund will be Rs 720. Please confirm."}
+{"id": "con-014", "task": "confirmation", "text": "Yes, cancel it", "lang": "en", "label": "yes", "context": "Do you want me to cancel PNR 4521367890? The refund will be Rs 720. Please confirm."}
+{"id": "con-015", "task": "confirmation", "text": "no", "lang": "en", "label": "no", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-016", "task": "confirmation", "text": "nako", "lang": "mr", "label": "no", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-017", "task": "confirmation", "text": "nahi, ruko", "lang": "hi", "label": "no", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-018", "task": "confirmation", "text": "wait, don't book yet", "lang": "en", "label": "no", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-019", "task": "confirmation", "text": "नाही, आत्ता नको", "lang": "mr-dev", "label": "no", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-020", "task": "confirmation", "text": "नहीं", "lang": "hi-dev", "label": "no", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-021", "task": "confirmation", "text": "hold on", "lang": "en", "label": "no", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-022", "task": "confirmation", "text": "No, change the date first", "lang": "en", "label": "no", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-023", "task": "confirmation", "text": "yes but make it 3A instead", "lang": "en", "label": "no", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-024", "task": "confirmation", "text": "nako thamb", "lang": "mr", "label": "no", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-025", "task": "confirmation", "text": "nahi re, dusri train bagh", "lang": "mr", "label": "no", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-026", "task": "confirmation", "text": "cancel nako karu", "lang": "mr", "label": "no", "context": "Do you want me to cancel PNR 4521367890? The refund will be Rs 720. Please confirm."}
+{"id": "con-027", "task": "confirmation", "text": "No, keep the ticket", "lang": "en", "label": "no", "context": "Do you want me to cancel PNR 4521367890? The refund will be Rs 720. Please confirm."}
+{"id": "con-028", "task": "confirmation", "text": "hmm", "lang": "en", "label": "unclear", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-029", "task": "confirmation", "text": "total kiti zala?", "lang": "mr", "label": "unclear", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-030", "task": "confirmation", "text": "what time does it reach Pune?", "lang": "en", "label": "unclear", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-031", "task": "confirmation", "text": "let me ask my wife", "lang": "en", "label": "unclear", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-032", "task": "confirmation", "text": "maybe", "lang": "en", "label": "unclear", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-033", "task": "confirmation", "text": "दुसरी ट्रेन आहे का?", "lang": "mr-dev", "label": "unclear", "context": "Shall I book 2 tickets on 12123 Deccan Queen (CC) for 22 Oct, total Rs 1,040? Please confirm."}
+{"id": "con-034", "task": "confirmation", "text": "refund kab tak aayega?", "lang": "hi", "label": "unclear", "context": "Do you want me to cancel PNR 4521367890? The refund will be Rs 720. Please confirm."}
+{"id": "fru-001", "task": "frustration", "text": "I've told you three times already, Pune to Mumbai!", "lang": "en", "label": "frustrated"}
+{"id": "fru-002", "task": "frustration", "text": "Kiti vela sangu, udya chi train!", "lang": "mr", "label": "frustrated"}
+{"id": "fru-003", "task": "frustration", "text": "This is useless, nothing works", "lang": "en", "label": "frustrated"}
+{"id": "fru-004", "task": "frustration", "text": "Yaar kab se bol raha hoon, PNR check karo", "lang": "hi", "label": "frustrated"}
+{"id": "fru-005", "task": "frustration", "text": "पुन्हा चूक! काय चाललंय?", "lang": "mr-dev", "label": "frustrated"}
+{"id": "fru-006", "task": "frustration", "text": "Seriously? Wrong date again??", "lang": "en", "label": "frustrated"}
+{"id": "fru-007", "task": "frustration", "text": "bakwas service hai", "lang": "hi", "label": "frustrated"}
+{"id": "fru-008", "task": "frustration", "text": "ugh just book it already", "lang": "en", "label": "frustrated"}
+{"id": "fru-009", "task": "frustration", "text": "You keep asking the same thing", "lang": "en", "label": "frustrated"}
+{"id": "fru-010", "task": "frustration", "text": "I am so fed up with this booking", "lang": "en", "label": "frustrated"}
+{"id": "fru-011", "task": "frustration", "text": "kaay faltu aahe he", "lang": "mr", "label": "frustrated"}
+{"id": "fru-012", "task": "frustration", "text": "बार बार वही गलती", "lang": "hi-dev", "label": "frustrated"}
+{"id": "fru-013", "task": "frustration", "text": "Thanks, that was quick", "lang": "en", "label": "not_frustrated"}
+{"id": "fru-014", "task": "frustration", "text": "Pune to Mumbai tomorrow please", "lang": "en", "label": "not_frustrated"}
+{"id": "fru-015", "task": "frustration", "text": "Can you check again for Sunday?", "lang": "en", "label": "not_frustrated"}
+{"id": "fru-016", "task": "frustration", "text": "ok no problem, show 2A instead", "lang": "en", "label": "not_frustrated"}
+{"id": "fru-017", "task": "frustration", "text": "Perfect, thank you!", "lang": "en", "label": "not_frustrated"}
+{"id": "fru-018", "task": "frustration", "text": "haan theek hai", "lang": "hi", "label": "not_frustrated"}
+{"id": "fru-019", "task": "frustration", "text": "mala 3A pahije", "lang": "mr", "label": "not_frustrated"}
+{"id": "fru-020", "task": "frustration", "text": "Is there any earlier train?", "lang": "en", "label": "not_frustrated"}
+{"id": "fru-021", "task": "frustration", "text": "Sorry, I meant Dadar not CSMT", "lang": "en", "label": "not_frustrated"}
+{"id": "fru-022", "task": "frustration", "text": "धन्यवाद", "lang": "mr-dev", "label": "not_frustrated"}
+{"id": "fru-023", "task": "frustration", "text": "That's fine, waitlist is ok", "lang": "en", "label": "not_frustrated"}
+{"id": "fru-024", "task": "frustration", "text": "Hmm, let me think", "lang": "en", "label": "not_frustrated"}

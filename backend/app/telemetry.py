@@ -5,6 +5,7 @@ so the dashboard numbers can be traced back to raw rows.
 """
 from __future__ import annotations
 
+import json
 import sqlite3
 import time
 import uuid
@@ -82,13 +83,15 @@ class Telemetry:
                  usage.thinking_tokens, latency_ms, c, int(ok), error))
         return c
 
-    def tool_call(self, ctx: TurnContext, tool: str, latency_ms: float, ok: bool) -> None:
+    def tool_call(self, ctx: TurnContext, tool: str, latency_ms: float, ok: bool,
+                  args: dict | None = None) -> None:
         ctx.tool_calls += 1
         with tx(self.conn):
             self.conn.execute(
-                "INSERT INTO tool_calls (ts, run_id, conversation_id, turn_id, mode, tool, latency_ms, ok)"
-                " VALUES (?,?,?,?,?,?,?,?)",
-                (_now(), ctx.run_id, ctx.conversation_id, ctx.turn_id, ctx.mode, tool, latency_ms, int(ok)))
+                "INSERT INTO tool_calls (ts, run_id, conversation_id, turn_id, mode, tool, latency_ms, ok, args)"
+                " VALUES (?,?,?,?,?,?,?,?,?)",
+                (_now(), ctx.run_id, ctx.conversation_id, ctx.turn_id, ctx.mode, tool, latency_ms, int(ok),
+                 json.dumps(args, ensure_ascii=False) if args is not None else None))
 
     def finish_turn(self, ctx: TurnContext, user_text: str, reply_text: str) -> dict:
         latency = (time.perf_counter() - ctx.started) * 1000

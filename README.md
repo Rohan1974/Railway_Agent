@@ -27,11 +27,32 @@ copy .env.example .env             # then put your ANTHROPIC_API_KEY in .env
 cd backend
 uv sync                            # creates .venv and installs exact versions from uv.lock
 uv run python -m app.railway.seed  # creates data\railway.db
-uv run pytest                      # 16 tests
+uv run pytest                      # 26 tests
 uv run uvicorn app.main:app --reload   # http://127.0.0.1:8000/docs
 ```
 
 Add a package: `uv add <name>` (dev-only: `uv add --dev <name>`). Don't use pip.
+
+## Benchmarks
+
+Two benchmarks, both run from `backend/`:
+
+| Bench | What it measures | Data |
+|---|---|---|
+| `decisions` | The classification steps alone: accuracy, latency and cost per decision, Claude vs Jev on identical questions | `eval/datasets/decisions.jsonl`: 215 labelled rows (intent, class, quota, confirmation, frustration) in English, Hindi and Marathi |
+| `scenarios` | The whole agent: task success, latency per turn, cost per conversation | `eval/datasets/scenarios.json`: 24 scripted conversations judged on the final DB state |
+
+```powershell
+uv run python -m eval.run decisions --fake --yes          # offline pipeline check (no API cost)
+uv run python -m eval.run decisions --limit 20            # small real run first
+uv run python -m eval.run decisions --repeats 3           # full run
+uv run python -m eval.run scenarios --ids S01-search-en,S06-book-en-full-details
+uv run python -m eval.run scenarios --repeats 3
+```
+
+Each run gets a `run_id` and is recorded in the `runs` table with the model, effort, dataset hash and git
+commit. Raw rows go to `eval/results/<run_id>/rows.jsonl` and the summary to `summary.json`. Fake runs are
+marked `fake-…` and are not committed. `--modes A,B` needs Jev API access.
 
 ## API
 
@@ -53,9 +74,10 @@ backend/app/
   telemetry.py         per-call logging and cost calculation
   railway/             mock data, service, tool schemas
   agents/              Mode A agent (Mode B coming)
+  decisions/           classification tasks, Claude classifier, Jev adapter (pending access)
+backend/eval/          benchmark datasets, runner, checks, results
 backend/tests/         pytest suite
 frontend/              React chat UI + dashboard (coming)
-eval/                  benchmark dataset + runner (coming)
 ```
 
 See `railway-agent-plan.md` for the full plan.

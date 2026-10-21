@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "run_id": "decisions-20261021-082205-db0d",
+    "bench": "decisions",
+    "modes": [
+      "A"
+    ],
+    "model": "claude-sonnet-5-5",
+    "effort": "medium",
+    "repeats": 1,
+    "items": 20,
+    "dataset_sha": "bbed4c88220f",
+    "git_commit": "f71cc6d-dirty",
+    "fake": false
+  },
+  "summary": {
+    "A": {
+      "decisions": 20,
+      "errors": 0,
+      "accuracy": 1.0,
+      "macro_accuracy_by_task": 1.0,
+      "by_task": {
+        "intent": {
+          "n": 20,
+          "accuracy": 1.0,
+          "invalid": 0
+        }
+      },
+      "by_lang": {
+        "en": {
+          "n": 10,
+          "accuracy": 1.0
+        },
+        "hi": {
+          "n": 3,
+          "accuracy": 1.0
+        },
+        "hi-dev": {
+          "n": 1,
+          "accuracy": 1.0
+        },
+        "mr": {
+          "n": 4,
+          "accuracy": 1.0
+        },
+        "mr-dev": {
+          "n": 2,
+          "accuracy": 1.0
+        }
+      },
+      "latency_ms": {
+        "p50": 1257.877899974119,
+        "p95": 1813.0229900823906,
+        "mean": 1339.3020149960648,
+        "n": 20
+      },
+      "cost_usd": {
+        "total": 0.018686,
+        "per_decision": 0.0009343000000000001
+      }
+    }
+  }
+}

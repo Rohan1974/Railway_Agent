@@ -49,7 +49,14 @@ CREATE TABLE IF NOT EXISTS model_calls (
 CREATE TABLE IF NOT EXISTS tool_calls (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     ts TEXT NOT NULL, run_id TEXT, conversation_id TEXT, turn_id TEXT, mode TEXT NOT NULL,
-    tool TEXT NOT NULL, latency_ms REAL NOT NULL, ok INTEGER NOT NULL
+    tool TEXT NOT NULL, latency_ms REAL NOT NULL, ok INTEGER NOT NULL, args TEXT
+);
+-- Benchmark runs: one row per eval run, so every number can be traced to its settings
+CREATE TABLE IF NOT EXISTS runs (
+    run_id TEXT PRIMARY KEY, ts TEXT NOT NULL, bench TEXT NOT NULL, modes TEXT NOT NULL,
+    model TEXT NOT NULL, effort TEXT NOT NULL, repeats INTEGER NOT NULL, items INTEGER NOT NULL,
+    dataset_sha TEXT NOT NULL, git_commit TEXT, fake INTEGER NOT NULL, status TEXT NOT NULL,
+    summary_json TEXT
 );
 -- Telemetry: one row per user turn (end-to-end)
 CREATE TABLE IF NOT EXISTS turns (
@@ -70,8 +77,17 @@ def connect(path: Path | None = None) -> sqlite3.Connection:
     return conn
 
 
+# Columns added after the first release. init_schema adds them to older databases.
+MIGRATIONS = {"tool_calls": {"args": "TEXT"}}
+
+
 def init_schema(conn: sqlite3.Connection) -> None:
     conn.executescript(SCHEMA)
+    for table, cols in MIGRATIONS.items():
+        have = {r[1] for r in conn.execute(f"PRAGMA table_info({table})")}
+        for col, typ in cols.items():
+            if col not in have:
+                conn.execute(f"ALTER TABLE {table} ADD COLUMN {col} {typ}")
     conn.commit()
 
 

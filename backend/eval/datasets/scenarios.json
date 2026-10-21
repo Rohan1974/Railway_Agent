@@ -1,0 +1,496 @@
+{
+ "today": "2026-10-21",
+ "note": "Dates are fixed relative to `today`; the runner pins TODAY so relative dates (udya, kal, parso) stay valid.",
+ "scenarios": [
+  {
+   "id": "S01-search-en",
+   "lang": "en",
+   "category": "search",
+   "turns": [
+    "Show me trains from Mumbai to Pune on 2026-10-22"
+   ],
+   "expect": {
+    "tool_args": [
+     {
+      "tool": "search_trains",
+      "args": {
+       "journey_date": "2026-10-22"
+      }
+     }
+    ],
+    "no_new_booking": true,
+    "reply_contains_any": [
+     "12123",
+     "Deccan Queen"
+    ]
+   }
+  },
+  {
+   "id": "S02-search-mr-relative-date",
+   "lang": "mr",
+   "category": "search",
+   "turns": [
+    "Udya Mumbai te Nagpur train sanga"
+   ],
+   "expect": {
+    "tool_args": [
+     {
+      "tool": "search_trains",
+      "args": {
+       "journey_date": "2026-10-22"
+      }
+     }
+    ],
+    "no_new_booking": true
+   }
+  },
+  {
+   "id": "S03-search-hi-parso-3a",
+   "lang": "hi",
+   "category": "search",
+   "turns": [
+    "Parso Mumbai se Delhi ke liye 3AC mein train batao"
+   ],
+   "expect": {
+    "tool_args": [
+     {
+      "tool": "search_trains",
+      "args": {
+       "journey_date": "2026-10-23"
+      }
+     }
+    ],
+    "no_new_booking": true
+   }
+  },
+  {
+   "id": "S04-fare-en",
+   "lang": "en",
+   "category": "fare",
+   "turns": [
+    "What's the chair car fare on Deccan Queen 12123 from Mumbai to Pune?"
+   ],
+   "expect": {
+    "tool_args": [
+     {
+      "tool": "get_fare",
+      "args": {
+       "train_number": "12123",
+       "travel_class": "CC"
+      }
+     }
+    ],
+    "no_new_booking": true
+   }
+  },
+  {
+   "id": "S05-availability-mr",
+   "lang": "mr",
+   "category": "availability",
+   "turns": [
+    "12105 Vidarbha Express madhe 25 October la 3A availability bagh, Mumbai te Nagpur"
+   ],
+   "expect": {
+    "tools_called_any": [
+     "check_availability",
+     "search_trains"
+    ],
+    "no_new_booking": true
+   }
+  },
+  {
+   "id": "S06-book-en-full-details",
+   "lang": "en",
+   "category": "book",
+   "turns": [
+    "Book 2 tickets on 11007 Deccan Express from Mumbai CSMT to Pune on 2026-10-25 in 3A, general quota. Passengers: Rohan Patole 28 M, Priya Patole 26 F.",
+    "Yes, everything is correct. Please book it."
+   ],
+   "expect": {
+    "booking": {
+     "train_number": "11007",
+     "travel_class": "3A",
+     "journey_date": "2026-10-25",
+     "from_code": "CSMT",
+     "to_code": "PUNE",
+     "quota": "GN",
+     "passengers": 2
+    }
+   }
+  },
+  {
+   "id": "S07-book-mr",
+   "lang": "mr",
+   "category": "book",
+   "turns": [
+    "12123 Deccan Queen madhe 24 October la Mumbai te Pune CC che 1 ticket book kar. Pravasi: Sunita Joshi, 58, female.",
+    "Ho, barobar aahe, book kar."
+   ],
+   "expect": {
+    "booking": {
+     "train_number": "12123",
+     "travel_class": "CC",
+     "journey_date": "2026-10-24",
+     "to_code": "PUNE",
+     "quota": "GN",
+     "passengers": 1
+    }
+   }
+  },
+  {
+   "id": "S08-book-hi-tatkal-tomorrow",
+   "lang": "hi",
+   "category": "book",
+   "turns": [
+    "Kal ke liye 12127 Intercity mein Mumbai se Pune tatkal CC ticket book karo. Passenger: Rahul Verma, 35, male.",
+    "Haan, sab sahi hai, book kar do."
+   ],
+   "expect": {
+    "booking": {
+     "train_number": "12127",
+     "travel_class": "CC",
+     "journey_date": "2026-10-22",
+     "quota": "TQ",
+     "passengers": 1
+    }
+   }
+  },
+  {
+   "id": "S09-book-multi-step",
+   "lang": "en",
+   "category": "book",
+   "turns": [
+    "I want to go from Mumbai to Nagpur on 2026-10-26 by the Duronto in 2A",
+    "One passenger: Amit Kulkarni, 40, male. General quota.",
+    "Yes, confirm the booking."
+   ],
+   "expect": {
+    "booking": {
+     "train_number": "12289",
+     "travel_class": "2A",
+     "journey_date": "2026-10-26",
+     "to_code": "NGP",
+     "passengers": 1
+    }
+   }
+  },
+  {
+   "id": "S10-book-user-declines",
+   "lang": "en",
+   "category": "book",
+   "turns": [
+    "Book 1 ticket on 12124 Deccan Queen from Pune to Mumbai CSMT on 2026-10-23 in CC for Neha Shah, 31, female.",
+    "No, don't book it. I'll decide later."
+   ],
+   "expect": {
+    "tools_not_called": [
+     "book_ticket"
+    ],
+    "no_new_booking": true
+   }
+  },
+  {
+   "id": "S11-pnr-en",
+   "lang": "en",
+   "category": "pnr",
+   "setup": {
+    "bookings": [
+     {
+      "train_number": "11007",
+      "from_station": "CSMT",
+      "to_station": "PUNE",
+      "journey_date": "2026-10-25",
+      "travel_class": "3A",
+      "quota": "GN",
+      "passengers": [
+       {
+        "name": "Meera Kulkarni",
+        "age": 34,
+        "gender": "F"
+       }
+      ]
+     }
+    ]
+   },
+   "turns": [
+    "What's the status of PNR {pnr0}?"
+   ],
+   "expect": {
+    "tool_args": [
+     {
+      "tool": "pnr_status",
+      "args": {
+       "pnr": "{pnr0}"
+      }
+     }
+    ],
+    "no_new_booking": true
+   }
+  },
+  {
+   "id": "S12-pnr-mr",
+   "lang": "mr",
+   "category": "pnr",
+   "setup": {
+    "bookings": [
+     {
+      "train_number": "11007",
+      "from_station": "CSMT",
+      "to_station": "PUNE",
+      "journey_date": "2026-10-25",
+      "travel_class": "3A",
+      "quota": "GN",
+      "passengers": [
+       {
+        "name": "Meera Kulkarni",
+        "age": 34,
+        "gender": "F"
+       }
+      ]
+     }
+    ]
+   },
+   "turns": [
+    "Maza PNR {pnr0} confirm aahe ka?"
+   ],
+   "expect": {
+    "tool_args": [
+     {
+      "tool": "pnr_status",
+      "args": {
+       "pnr": "{pnr0}"
+      }
+     }
+    ],
+    "no_new_booking": true
+   }
+  },
+  {
+   "id": "S13-cancel-en",
+   "lang": "en",
+   "category": "cancel",
+   "setup": {
+    "bookings": [
+     {
+      "train_number": "11007",
+      "from_station": "CSMT",
+      "to_station": "PUNE",
+      "journey_date": "2026-10-25",
+      "travel_class": "3A",
+      "quota": "GN",
+      "passengers": [
+       {
+        "name": "Meera Kulkarni",
+        "age": 34,
+        "gender": "F"
+       }
+      ]
+     }
+    ]
+   },
+   "turns": [
+    "Cancel my ticket, PNR {pnr0}",
+    "Yes, cancel it."
+   ],
+   "expect": {
+    "cancelled": [
+     "{pnr0}"
+    ]
+   }
+  },
+  {
+   "id": "S14-cancel-mr-user-declines",
+   "lang": "mr",
+   "category": "cancel",
+   "setup": {
+    "bookings": [
+     {
+      "train_number": "11007",
+      "from_station": "CSMT",
+      "to_station": "PUNE",
+      "journey_date": "2026-10-25",
+      "travel_class": "3A",
+      "quota": "GN",
+      "passengers": [
+       {
+        "name": "Meera Kulkarni",
+        "age": 34,
+        "gender": "F"
+       }
+      ]
+     }
+    ]
+   },
+   "turns": [
+    "PNR {pnr0} cancel kar",
+    "Nako, thamb. Cancel nako karu."
+   ],
+   "expect": {
+    "not_cancelled": [
+     "{pnr0}"
+    ],
+    "tools_not_called": [
+     "cancel_ticket"
+    ]
+   }
+  },
+  {
+   "id": "S15-offtopic-joke",
+   "lang": "en",
+   "category": "off_topic",
+   "turns": [
+    "Tell me a joke about cricket"
+   ],
+   "expect": {
+    "no_tools": true,
+    "no_new_booking": true
+   }
+  },
+  {
+   "id": "S16-offtopic-flight",
+   "lang": "en",
+   "category": "off_topic",
+   "turns": [
+    "Book a flight from Mumbai to Delhi tomorrow for Rohan Patole, 28, male"
+   ],
+   "expect": {
+    "tools_not_called": [
+     "book_ticket"
+    ],
+    "no_new_booking": true
+   }
+  },
+  {
+   "id": "S17-past-date",
+   "lang": "en",
+   "category": "edge",
+   "turns": [
+    "Book a ticket on 12123 from Mumbai to Pune on 2026-10-01 in CC for Rohan Patole, 28, male",
+    "Yes, book it."
+   ],
+   "expect": {
+    "no_new_booking": true
+   }
+  },
+  {
+   "id": "S18-book-ladies-quota",
+   "lang": "en",
+   "category": "book",
+   "turns": [
+    "Book a ladies quota CC ticket on 12125 Pragati Express from Mumbai to Pune on 2026-10-24 for Asha Deshpande, 45, female.",
+    "Yes, book it."
+   ],
+   "expect": {
+    "booking": {
+     "train_number": "12125",
+     "travel_class": "CC",
+     "journey_date": "2026-10-24",
+     "quota": "LD",
+     "passengers": 1
+    }
+   }
+  },
+  {
+   "id": "S19-book-hi-senior-citizen",
+   "lang": "hi",
+   "category": "book",
+   "turns": [
+    "Mere dada ji ke liye senior citizen quota mein 12115 Siddheshwar Express, Mumbai se Solapur, 25 October, 3A book karo. Naam: Vinayak Rao, umar 72, male.",
+    "Haan book karo."
+   ],
+   "expect": {
+    "booking": {
+     "train_number": "12115",
+     "travel_class": "3A",
+     "journey_date": "2026-10-25",
+     "to_code": "SUR",
+     "quota": "SS",
+     "passengers": 1
+    }
+   }
+  },
+  {
+   "id": "S20-book-midway-boarding",
+   "lang": "en",
+   "category": "book",
+   "turns": [
+    "Book 12115 from Pune to Solapur, boarding at Pune on 2026-10-26 (it leaves Pune at 02:30), 2A, for Rohan Patole 28 M.",
+    "Yes, please book."
+   ],
+   "expect": {
+    "booking": {
+     "train_number": "12115",
+     "travel_class": "2A",
+     "journey_date": "2026-10-26",
+     "from_code": "PUNE",
+     "to_code": "SUR",
+     "passengers": 1
+    }
+   }
+  },
+  {
+   "id": "S21-search-then-book",
+   "lang": "en",
+   "category": "book",
+   "turns": [
+    "Show trains from Mumbai to Pune on 2026-10-23 in chair car",
+    "Book the Deccan Queen for Priya Shah, 30, female, general quota",
+    "Yes, confirm."
+   ],
+   "expect": {
+    "tools_called": [
+     "search_trains"
+    ],
+    "booking": {
+     "train_number": "12123",
+     "travel_class": "CC",
+     "journey_date": "2026-10-23",
+     "passengers": 1
+    }
+   }
+  },
+  {
+   "id": "S22-fare-mr-devanagari",
+   "lang": "mr-dev",
+   "category": "fare",
+   "turns": [
+    "मुंबई ते कोल्हापूर महालक्ष्मी एक्सप्रेस स्लीपर तिकीट किती आहे?"
+   ],
+   "expect": {
+    "tool_args": [
+     {
+      "tool": "get_fare",
+      "args": {
+       "train_number": "17411",
+       "travel_class": "SL"
+      }
+     }
+    ],
+    "no_new_booking": true
+   }
+  },
+  {
+   "id": "S23-greeting",
+   "lang": "mr",
+   "category": "greeting",
+   "turns": [
+    "Namaskar"
+   ],
+   "expect": {
+    "no_tools": true
+   }
+  },
+  {
+   "id": "S24-tatkal-too-early",
+   "lang": "en",
+   "category": "edge",
+   "turns": [
+    "Book a tatkal CC ticket on 12123 for 2026-10-28 from Mumbai to Pune for Rohan Patole, 28, male",
+    "Yes, book it."
+   ],
+   "expect": {
+    "no_new_booking": true
+   }
+  }
+ ]
+}
